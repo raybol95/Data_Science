@@ -29,5 +29,10 @@ df = pd.DataFrame(data) # convert dictionary data to dataframe with pandas
 df.head() # show the first 5 rows dataframe
 
 # From ndarray
-data_array = pd.DataFrame(np.array([['banana', 'apple', 'grape', 'orange', 'durian', 'pineapple'], [10, 5, 40, 12, 2, 4]]), columns=['fruit', 'value']) # make dataframe from ndarray
+data_array = pd.DataFrame(np.array([['banana', 10], ['apple', 5], ['grape', 40], ['orange', 12], ['durian', 2], ['pineapple', 4]]), columns=['fruit', 'value']) # make dataframe from ndarray
 data_array.head() # show first 5 rows dataframe
+
+# Dataframe with declaring index
+data_index = pd.DataFrame(np.array([['banana', 10], ['apple', 5], ['grape', 40], ['orange', 12], ['durian', 2], ['pineapple', 4]]), columns=['fruit', 'value'])
+data_index.set_index(['fruit'], inplace=True)
+data_index.head()
