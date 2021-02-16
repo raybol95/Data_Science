@@ -8,4 +8,4 @@ df_pickle = pd.read_pickle('filename.pkl') # read pickle file
 
 connection = create_engine('postgresql://blablabla') # make a connection to database, in this case is postgreesql
 df_sql = pd.read_sql('table_name', connection) # read data table from sql database
-df_query = od.read_sql('select a from b where id>50', connection) # read data using a sql query
+df_query = pd.read_sql('select a from b where id>50', connection) # read data using a sql query
